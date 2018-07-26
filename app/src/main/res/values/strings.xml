@@ -1,5 +1,12 @@
 <resources>
-    <string name="app_name">Catalogue Movie App</string>
+    <string name="app_name">Catalogue Movie</string>
     <string name="search_movie_here">Search movie here</string>
     <string name="cari">Cari</string>
+    <string name="title_movie">Captain America : Civil War</string>
+    <string name="details">details</string>
+    <string name="overview_movie">Following the events of Age of Ultron, the collective governments of the world pass an act designed to regulate all superhuman activity. This polarizes opinion amongst the Avengers, causing two factions to side with Iron Man or Captain America, which causes an epic battle between former allies.</string>
+    <string name="release_date">Release Date</string>
+    <string name="rating">Rating</string>
+    <string name="_7_2">7.2</string>
+    <string name="play">Play</string>
 </resources>

@@ -90,8 +90,16 @@ public class MainActivity extends AppCompatActivity implements LoaderManager.Loa
 
         @Override
         public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+
             MovieModel movieItem = (MovieModel) parent.getItemAtPosition(position);
-            //Intent moveDetail = new Intent(MainActivity.this, );
+
+            Intent moveDetail = new Intent(MainActivity.this, MovieDetailActivity.class);
+            moveDetail.putExtra(MovieDetailActivity.EXTRA_TITLE, movieItem.getTitle_movie());
+            moveDetail.putExtra(MovieDetailActivity.EXTRA_OVERVIEW, movieItem.getOverview());
+            moveDetail.putExtra(MovieDetailActivity.EXTRA_RELEASE_DATE, movieItem.getRelease_date());
+            moveDetail.putExtra(MovieDetailActivity.EXTRA_IMG_POSTER, movieItem.getPoster());
+            moveDetail.putExtra(MovieDetailActivity.EXTRA_IMG_BACKDROP, movieItem.getBackdrop());
+            startActivity(moveDetail);
         }
     };
 }

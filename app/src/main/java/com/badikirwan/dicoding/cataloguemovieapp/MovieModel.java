@@ -9,6 +9,7 @@ public class MovieModel {
     private String poster;
     private String overview;
     private String release_date;
+    private String backdrop;
 
     MovieModel(JSONObject movie) {
         try {
@@ -16,11 +17,14 @@ public class MovieModel {
             String movieOverview = movie.getString("overview");
             String movieReleaseDate = movie.getString("release_date");
             String moviePoster = movie.getString("poster_path");
+            String movieBackdrop = movie.getString("backdrop_path");
 
             this.title_movie = movieTitle;
             this.overview = movieOverview;
             this.release_date = movieReleaseDate;
             this.poster = moviePoster;
+            this.backdrop = movieBackdrop;
+
         } catch (JSONException e) {
             e.printStackTrace();
         }
@@ -58,4 +62,11 @@ public class MovieModel {
         this.release_date = release_date;
     }
 
+    public String getBackdrop() {
+        return backdrop;
+    }
+
+    public void setBackdrop(String backdrop) {
+        this.backdrop = backdrop;
+    }
 }
